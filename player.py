@@ -6,7 +6,7 @@ pg.init()
 keys = pg.key.get_pressed()
 
 # Refactoring player mechanic
-class player:
+class Player:
 
     def __init__(self, player_image="", player_pos=()):
         """Blueprint to player object."""
