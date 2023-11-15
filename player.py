@@ -31,5 +31,5 @@ class Player:
         if keyup:
             player_rect.move_ip(move_down)
 
-player_1 = player("player_pong_sprite.png", (80, 400))
+player_1 = Player("player_pong_sprite.png", (80, 400))
 player_1.handle_keys()
