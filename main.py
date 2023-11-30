@@ -1,5 +1,5 @@
 import pygame as pg
-
+from player import Player
 pg.init()
 
 # Define properties
@@ -11,7 +11,8 @@ clock = pg.time.Clock()
 
 pp_court = pg.image.load("pong_court.png")
 screen = pg.display.set_mode((x_axis, y_axis))
-screen.get_rect()
+window_rect = screen.get_rect()
+paddle1 = Player("player_pong_sprite.png",)
 
 playerl_pos = (80, 400)
 playerl = pg.image.load("player_pong_sprite.png" ).convert_alpha()

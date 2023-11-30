@@ -2,17 +2,18 @@ import pygame as pg
 
 pg.init()
 
-
 keys = pg.key.get_pressed()
 
 # Refactoring player mechanic
 class Player:
 
-    def __init__(self, player_image="", player_pos=()):
+    def __init__(self, player, player_image="", player_pos=()):
         """Blueprint to player object."""
 
         self.player_pos = player_pos
         self.player_image = player_image
+        self.player = player
+        self.player = pg.image.load(self.player_image).convert_alpha()
 
 
     def handle_keys(self, player_rect, move_up=(0,-6), move_down=(0,6), keyup=[], keydwn=[]):
@@ -31,5 +32,15 @@ class Player:
         if keyup:
             player_rect.move_ip(move_down)
 
-player_1 = Player("player_pong_sprite.png", (80, 400))
-player_1.handle_keys()
+    
+    # def handle_keys(self, playerl_rect, player_r_rect):
+    #     """Handles key down logic for player movement."""
+    #     keys = pg.key.get_pressed()
+    #     if keys[pg.K_w]:
+    #         playerl_rect.move_ip(0, -6)
+    #     if keys[pg.K_s]:
+    #         playerl_rect.move_ip(0, 6)
+    #     if  keys[pg.K_UP]:
+    #         player_r_rect.move_ip(0, -6)
+    #     if keys[pg.K_DOWN]:
+    #         player_r_rect.move_ip(0, 6)
