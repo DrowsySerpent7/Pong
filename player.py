@@ -16,6 +16,7 @@ class Player:
         self.player_rect = self.player.get_rect()
         self.player_rect.center = (self.player_pos)
     
+    
     def handle_player1_keys(self):
         """Handles key down logic for player movement."""
         keys = pg.key.get_pressed()
@@ -26,6 +27,7 @@ class Player:
         else:
             quit
     
+
     def handle_player2_keys(self):
         """Coop player2 key movement"""
         keys = pg.key.get_pressed()
