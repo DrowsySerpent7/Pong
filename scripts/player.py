@@ -9,12 +9,13 @@ keys = pygame.key.get_pressed()
 class Player:
 
     def __init__(self, player_image="", player_pos=()):
-        """Blueprint to player object."""
+        """Player object."""
 
         self.player_pos = player_pos
         self.player_image = player_image
         self.player = pygame.image.load(self.player_image).convert_alpha()
         self.player_rect = self.player.get_rect()
+        self.player_rect.fit(self.player_rect)
         self.player_rect.center = (self.player_pos)
     
     
@@ -52,5 +53,4 @@ class Player:
 
             if self.player_rect.bottom == configs.window_rect.bottom:
                 self.player_rect.move_ip(0, -6)
-        
         

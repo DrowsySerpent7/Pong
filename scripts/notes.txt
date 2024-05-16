@@ -1,0 +1,10 @@
+
+## Notes ##
+
+# Countdown timer.
+
+# Ball logic
+
+# Fix paddle collision <-(rect)
+
+# GUI start menu

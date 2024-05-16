@@ -7,5 +7,5 @@ screen = pygame.display.set_mode((x_axis, y_axis))
 center_screen = [x_axis / 2, y_axis / 2]
 window_rect = screen.get_rect()
 run = True
-
 clock = pygame.time.Clock()
+

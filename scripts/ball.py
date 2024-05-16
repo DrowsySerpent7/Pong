@@ -1,6 +1,8 @@
 import pygame
-pygame.init()
+import random
 
+pygame.init()
+speed = 6.0
 
 class Ball:
     def __init__(self, ball_image="", ball_pos=[]):
@@ -10,4 +12,4 @@ class Ball:
         self.ball = pygame.image.load(ball_image).convert_alpha()
         self.ball_rect = self.ball.get_rect()
         self.ball_rect.center = self.ball_pos
-        self.speed = [5,5]
+        self.velocity = [speed, speed]

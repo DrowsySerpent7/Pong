@@ -1,21 +1,30 @@
 import pygame
+import configs as cf
 
 pygame.init()
 
-p1_score = 0
-p2_score = 0
-p1_start_pos = (80, 400)
-p2_start_pos = (1200, 400)
+scoreA = 0
+scoreB = 0
+countdown = 5
+game_over = False
+p1_start = (80, 400)
+p2_start = (1200, 400)
+WHITE = (255,255,255)
+CREAM = (255,253,208)
 
-score_font = pygame.font.Font("fonts/digital_tech.otf", 20)
+def display_score():
+    """Handle score reputition"""
+    font = pygame.font.Font("fonts/digital_tech.otf", 75)
 
-class Table():
-    """Contains table functionality such as score keeping
-    and serving to a certain side after player scores."""
+    text = font.render(str(scoreA), 1, WHITE)
+    cf.screen.blit(text, (900, 10))
+    
+    text = font.render(str(scoreB), 1, WHITE)
+    cf.screen.blit(text, (340, 10))
 
-    def __init__(self) -> None:
-        """Initialization"""
+def display_time():
+    """Keep track of the time limit"""
+    clock = pygame.font.Font("fonts/digital_tech.otf", 33)
 
-    def keep_score(self):
-        """Keep score for goals."""
-        score_font.render("0")
+    # time = clock.render(str(countdown), 1, CREAM)
+    # cf.screen.blit(time, cf.center_screen)
